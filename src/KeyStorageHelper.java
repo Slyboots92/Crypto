@@ -21,8 +21,7 @@ import static org.junit.Assert.*;
 public class KeyStorageHelper {
 
 
-
-	    
+	  
 	    public static SecretKey retrieveStoredKey(String keyStoreFile,String keyStorePassword,String alias,String keyPasswd){
 	    	
 	    
@@ -56,7 +55,7 @@ public class KeyStorageHelper {
 	        return new String(Base64.getEncoder().encode(secretKey.getEncoded()));
 	    }
 
-	    private static KeyStore createOrLoadKeyStore(String fileName, String pw) throws Exception {
+	    public static KeyStore createOrLoadKeyStore(String fileName, String pw) throws Exception {
 	        File file = new File(fileName);
 
 	        final KeyStore keyStore = KeyStore.getInstance("JCEKS");
