@@ -1,13 +1,15 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.*;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.KeyStore;
 import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
 
 import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
@@ -19,13 +21,15 @@ import org.junit.Test;
 
 public class RC4 {
 
-	 public String encrypt(String plainText,SecretKey key){
+	 public static String encrypt(String plainText,SecretKey key){
 		  String cipher=null;
 		    try {
 		    	Cipher rc4 = Cipher.getInstance("RC4",new BouncyCastleProvider());
 				rc4.init(Cipher.ENCRYPT_MODE, key);
 				byte [] cipherText = rc4.update(plainText.getBytes("ASCII"));
+				//System.out.println("bytes before "+ Arrays.toString(cipherText));
 				cipher=DatatypeConverter.printHexBinary(cipherText);
+				//System.out.println("after "+DatatypeConverter.parseHexBinary(cipher));
 			} catch (InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException | UnsupportedEncodingException e) {
 				e.printStackTrace();
 			}
@@ -79,6 +83,10 @@ public class RC4 {
 	    assertEquals(plainText, retriveText);
 		
 	}
-	
+	public static void main(String[] args) throws UnsupportedEncodingException, FileNotFoundException {
+		
+		
+		
+	}
 	
 }
