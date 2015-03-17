@@ -104,15 +104,7 @@ public class StreamCipheBrutAtack {
 		array[5]="undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum(The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Re";
 		array[6]="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of ";  
 		array[7]="Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to gen";		
-		array[8]="Many gay and lesbian people are in committed same-sex relationships, though only recently have census forms and political conditions facilitated their visibility and enumeration.[15] These relationships are equivalent to heterosexual relati";
-		array[9]="admired, as well as condemned, throughout recorded history, depending on the form they took and the culture in which they occurred.[16] Since the end of the 19th century, there has been a global movement towards increased visibility, recogn";
-	   array[10]="attraction, sexual attraction or sexual behavior between members of the same sex or gender. As a sexual orientation, homosexuality is an enduring pattern of emotional, romantic, and/or sexual attractions primarily or exclusively to peopl   ";
-	   array[11]="Along with bisexuality and heterosexuality, homosexuality is one of the three main categories of sexual orientation within the heterosexual–homosexual continuum.[1] There is no consensus among scientists about why a person develops a parti ";
-		array[12]="of genetic and social factors.[4][5] There is no substantive evidence which suggests parenting or early childhood experiences play a role when it comes to sexual orientation;[4] when it comes to same-sex sexual behavior, shared or familial ";
-		array[13]="The word homosexual is a Greek and Latin hybrid, with the first element derived from Greek ὁμός homos,  same (not related to the Latin homo,  man , as in Homo sapiens), thus connoting sexual acts and affections between members of the same s";
-	    array[14]="Societal attitudes towards same-sex relationships have varied over time and place, from expecting all males to engage in same-sex relationships, to casual integration, through acceptance, to seeing the practice as a minor sin, repressing it";
-	    array[15]=" In social science, there has been a dispute between  essentialist  and  constructionist views of homosexuality. The debate divides those who believe that terms such as  gay  and  straight  refer to objective, culturally invariant propertie";
-	   
+	
 	   String key="Secret";
 		SecretKey secretKey;
 		byte [] keyBytes = key.getBytes("ASCII");
