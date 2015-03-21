@@ -1,3 +1,4 @@
+package lab1;
 import static org.junit.Assert.assertEquals;
 
 import java.io.UnsupportedEncodingException;
