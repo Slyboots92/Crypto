@@ -5,10 +5,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import javax.xml.bind.DatatypeConverter;
 
-import lab1.StreamCipheBrutAtack;
+import lab1.StreamCipheAtack;
 
 public class VigenereAttack {
 
@@ -25,6 +27,39 @@ public class VigenereAttack {
 		String test2;
 		int min=1000;
 		test2=test3.replaceAll(" ", "");
+		ArrayList<Byte[]> ciphers= new ArrayList<Byte[]>();
+		
+		
+		//if(jump+2<test2.length()){
+	//		array[j]=(byte) Integer.parseInt(test2.substring(jump,jump+2),16);
+		//}
+		
+		int size=0;
+		int jump=0;
+		Byte[] array= new Byte[10];
+		byte[] ciphers1= new byte[test2.length()/2];
+		for(int i=0;i<test2.length()/2;i++){
+			
+			array[i%10]=(byte) Integer.parseInt(test2.substring(jump,jump+2),16);
+			ciphers1[i]=(byte) Integer.parseInt(test2.substring(jump,jump+2),16);
+			//System.out.println("array[i] "+array[i%10]);
+			if(i!=0&&(i+1)%10==0){
+				ciphers.add(array);
+				array=new Byte[10];
+			}
+			jump++;
+			jump++;
+		}
+		Map<Integer, Byte> key = StreamCipheAtack.matching(ciphers);
+		Set<Integer> mapKeys = key.keySet();
+		byte[] mess= new byte[test2.length()/2];
+		for (int i = 0; i < mess.length; i++) {
+			System.out.println("mess i "+key.get(i));
+			mess[i]=(byte) (key.get(i%10)^ciphers1[i]);
+		}
+		
+		String result= new String(mess,"ASCII");
+		System.out.println("result "+result);
 		/*List<Integer> lengths= new ArrayList<Integer>();
 		for(int i=0;i<test2.length()-3;i++){
 			String pattern=test2.substring(i,i+3);
@@ -48,7 +83,7 @@ public class VigenereAttack {
 			System.out.println(" i "+i+" " +count+"  size "+lengths.size());
 			histo[i]=count;
 		}*/
-		
+		/*
 		System.out.println(test2.length());
 		String array[]= new String[(test2.length()/20)];
 		System.out.println("array.length "+array.length);
@@ -113,7 +148,7 @@ public class VigenereAttack {
 			}
 			 String ratunku = new String(mess,"ASCII");
 		System.out.println(ratunku);
-		
+		*/
 		
 		}
 	

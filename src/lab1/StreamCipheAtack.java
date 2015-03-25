@@ -15,7 +15,7 @@ import javax.xml.bind.DatatypeConverter;
 
 
 
-public class StreamCipheBrutAtack {
+public class StreamCipheAtack {
 	
 		public static Map<Integer, Byte>  matching(ArrayList<Byte[]> ciphers){
 			Map<Integer,ArrayList<Byte>> key = new TreeMap<Integer,ArrayList<Byte>>();
