@@ -11,12 +11,10 @@ public class LCGPredictor {
 		
 		ArrayList<Long> result = new ArrayList<Long>();
 		if(input.size()>=4){
-			
 			for(int i=3;i<input.size();i++){
 				result.add(computeMultiple(input.get(i-3),input.get(i-2),input.get(i-1),input.get(i)));
 			}
 		}
-		
 		
 		return tryHitM(result);
 	}
@@ -56,4 +54,5 @@ public class LCGPredictor {
 			}
 		
 	}
+	
 }
