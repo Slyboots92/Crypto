@@ -13,8 +13,8 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		
-		LCG lcg = new LCG(12, 16807 , 2, (long) (Math.pow(2, 31)-1));
-		//LCG lcg = new LCG(12,16849,2,1014356);
+		//LCG lcg = new LCG(12, 16807 , 2, (long) (Math.pow(2, 31)-1));
+		LCG lcg = new LCG(12,57,2,101);
 		
 		//2147483647
 		ArrayList<Long> input = new ArrayList<Long>();
