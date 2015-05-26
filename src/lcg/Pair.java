@@ -1,11 +1,7 @@
 package lcg;
 
-public class Pair implements Comparable<Pair>{
+public class Pair {
 
-	public Pair(Long a,Long b){
-		this.a=a;
-		this.b=b;
-	}
 	private Long a;
 	private Long b;
 	public Long getA() {
@@ -19,12 +15,5 @@ public class Pair implements Comparable<Pair>{
 	}
 	public void setB(Long b) {
 		this.b = b;
-	}
-	@Override
-	public int compareTo(Pair o) {
-		if(o.getA().equals(this.getA())&&o.getB().equals(this.getB()))
-			return 0;
-		else
-			return 1;
 	}
 }
